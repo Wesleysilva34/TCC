@@ -79,7 +79,7 @@
                                     <a class="dropdown-item" href="perfil.html">Perfil</a>
                                     <a class="dropdown-item" href="pagamento.html">Pagamento</a>
                                     <a class="dropdown-item" href="historico.html">Relatório</a>
-                                    <a class="dropdown-item" href="#">Sair</a>
+                                    <a class="dropdown-item" href="login.html">Sair</a>
                                 </div>
 							</li>
 						</ul>
@@ -94,6 +94,7 @@
 		</div>
 	</div>
 </section>
+
 <!-- Consulta de Veiculos -->
 <div class="table-responsive">
     <div class="container">
@@ -101,7 +102,7 @@
             <form method="post" name="" action="">
                 <div class="form-group">
                 <label for="nome_profissional" class="control-label"> Digite o nome do Veículo</label>
-                <input type="text" class="form-control"  name="nome">
+                <input type="text" class="form-control"  name="nome" required>
             </div>
         <button type="submit" class="btn btn-primary btn-block" name=""><span class="glyphicon glyphicon-search"></span> Consultar</button>
     </form>
@@ -163,15 +164,15 @@
 
                 <div class="modal-body">
                     <label for="veiculo">Nome do veículo :</label>
-                    <input class="form-control" type="text" name=""/>
+                    <input class="form-control" type="text" name="" required/>
                     <label for="placa">Número da Placa : </label>
-					<input class="form-control" type="text" name=""/>
+					<input class="form-control" type="text" name="" required/>
                     <label for="renavam">Número do renavam : </label>
-					<input class="form-control" type="text" name=""/>
+					<input class="form-control" type="text" name="" required/>
 					<label for="Ano">Ano :</label>
-                    <input class="form-control" type="text" name=""/>
+                    <input class="form-control" type="text" name="" required/>
                     <label for="valordia">Valor por dia:</label>
-                    <input class="form-control" type="text" name=""/> 
+                    <input class="form-control" type="text" name="" required/> 
                 </div>
                 <!-- Select Basic -->
                 <div class="form-group">
