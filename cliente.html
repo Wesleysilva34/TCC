@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Funcionário</title>
+    <title>Cliente</title>
 
     <!-- FAVICON -->
     <link href="img/favicon.png" rel="shortcut icon">
@@ -76,7 +76,6 @@
                                     <a class="nav-link" href="veiculo.html">Veículos</a>
                                 </li>
 
-
                                 <li class="nav-item dropdown dropdown-slide">
                                     <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
@@ -97,20 +96,15 @@
         </div>
     </section>
 
-    <!-- Mensagem -->
-    <br>
-    <div class="alert alert-success">
-        <strong>Atenção: </strong> Funcionário cadastrado com sucesso!
-    </div>
 
-    <!-- consulta Funcionario -->
+    <!-- Consulta de Cliente -->
     <div class="table-responsive">
         <div class="container">
-            <h2 class="display-4">Consulta de Funcionário</h2>
+            <h2 class="display-4">Consulta de Cliente</h2>
             <form method="post" name="" action="">
                 <div class="form-group">
-                    <label for="cpf_profissional" class="control-label"> Digite o CPF do Funcionário</label>
-                    <input type="text" class="form-control" name="cpf">
+                    <label for="cpf_profissional" class="control-label"> Digite o nome do Cliente</label>
+                    <input type="text" class="form-control" name="cpf" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" name=""><span
                         class="glyphicon glyphicon-search"></span> Consultar</button>
@@ -121,7 +115,7 @@
     </div>
     </div>
 
-    <!-- Resultado Funcionario -->
+    <!-- Resultado da consulta de cliente -->
     <label for=""> </label>
     <label for=""> </label>
     <div class="section-title">
@@ -133,25 +127,25 @@
                     <table id="example" class="table table-striped table-bordered" class="text-center"
                         style="width:100%">
                         <thead>
-                            <th>Cargo</th>
-                            <th>Nome do Funcionário</th>
-                            <th>CPF</th>
-                            <th>Telefone</th>
+                            <th>Nome</th>
                             <th>Email</th>
+                            <th>CPF</th>
+                            <th>Data</th>
+                            <th>Telefone</th>
+                            <th>Reputação</th>
                             <th>Endereço</th>
                             <th>Usuario</th>
-                            <th>Senha</th>
                             <th>Ação</th>
                         </thead>
                         <tbody>
-                            <td>Administrador </td>
                             <td>Wesley da Silva</td>
-                            <td>045.762.271-84</td>
-                            <td>99465616</td>
                             <td>wesley85@gmail.com </td>
+                            <td>045.762.271-84</td>
+                            <td>17/12/1990</td>
+                            <td>99465616</td>
+                            <td>4 Estrelas</td>
                             <td>Quadra 5 Conjunto A</td>
                             <td>wesley85</td>
-                            <td>•••••••••••</td>
                             <td><button type="button" class="btn btn-info" data-toggle="modal"
                                     data-target="#alterar">Alterar</button> <button type="button" class="btn btn-danger"
                                     data-toggle="modal" data-target="#excluir">Excluir</button></td>
@@ -159,44 +153,47 @@
                     </table>
                 </div>
                 <p class="text-left"> <button type="button" class="btn btn-info" data-toggle="modal"
-                        data-target="#inserir"> Adicionar Funcionario</button></p>
+                        data-target="#inserir"> Adicionar Cliente</button></p>
             </div>
         </div>
     </div>
 
-    <!-- Inserir Funcionario -->
+    <!-- Inserir Cliente -->
 
     <div class="modal fade" id="inserir" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form method="post">
+                <form method="post" action="funcionario-aviso.html">
                     <div class="modal-header">
-                        <h4 class="modal-title">Inserir Funcionário</h4>
+                        <h4 class="modal-title">Adicionar Cliente</h4>
                         <button type="button" class="close" data-dismiss="modal">X</button>
                     </div>
                     <div class="modal-body">
-                        <label for="cpf_profissional">Cargo :</label>
-                        <input class="form-control" type="text" name="" />
-                        <label for="cpf_profissional">Nome :</label>
-                        <input class="form-control" type="text" name="" />
-                        <label for="cpf_profissional">CPF: </label>
-                        <input class="form-control" type="text" name="" />
-                        <label for="cpf_profissional">Telefone :</label>
-                        <input class="form-control" type="text" name="" />
-                        <label for="cpf_profissional">E-mail :</label>
-                        <input class="form-control" type="email" name="" />
-                        <label for="cpf_profissional">Endereço :</label>
-                        <input class="form-control" type="text" name="" />
-                        <label for="cpf_profissional">Usuario :</label>
-                        <input class="form-control" type="text" name="" />
+                        <label for="nome">Nome :</label>
+                        <input class="form-control" type="text" name="" required />
+                        <label for="email">E-mail :</label>
+                        <input class="form-control" type="email" name="" required />
+                        <label for="cpf">CPF: </label>
+                        <input class="form-control" type="text" name="" required />
+                        <label for="fone">RG :</label>
+                        <input class="form-control" type="text" name="" required />
+                        <label for="fone">Data Nascimento:</label>
+                        <input class="form-control" type="text" name="" required />
+                        <label for="email">Telefone :</label>
+                        <input class="form-control" type="email" name="" required />
+                        <label for="endereco">Endereço :</label>
+                        <input class="form-control" type="text" name="" required />
+                        <label for="usuario">Usuario :</label>
+                        <input class="form-control" type="text" name="" required />
                         <!-- Confirm New Password -->
                         <div class="form-group">
                             <label for="confirm-password">Senha :</label>
-                            <input type="password" class="form-control" id="confirm-password">
+                            <input type="password" class="form-control" id="confirm-password" required>
                         </div>
 
+                        <!-- Botao  Inserir foto -->
                         <div class="form-group">
-                            <label class="col-md-2 control-label" for="filebutton">Inserir Foto</label>
+                            <label class="col-md-2 control-label" for="filebutton">Inserir foto</label>
                             <div class="col-md-2">
                                 <input id="filebutton" name="filebutton" class="input-file" type="file">
                             </div>
@@ -212,18 +209,16 @@
         </div>
     </div>
 
-    <!-- Alterar-->
+    <!-- Alterar Cliente -->
     <div class="modal fade" id="alterar" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <form method="post">
                     <div class="modal-header">
-                        <h4 class="modal-title">Alterar Funcionario</h4>
+                        <h4 class="modal-title">Alterar Cliente</h4>
                         <button type="button" class="close" data-dismiss="modal">X</button>
                     </div>
                     <div class="modal-body">
-                        <label for="cpf_profissional">Cargo :</label>
-                        <input class="form-control" type="text" name="" value="Administrador" />
                         <label for="cpf_profissional">Telefone :</label>
                         <input class="form-control" type="text" name="" value="99465616" />
                         <label for="cpf_profissional">E-mail :</label>
@@ -231,11 +226,16 @@
                         <label for="cpf_profissional">Endereço :</label>
                         <input class="form-control" type="text" name="" value="Quadra 5 Conjunto A" />
 
-                        <div class="form-group">
-                            <label class="col-md-2 control-label" for="filebutton">Inserir Foto</label>
-                            <div class="col-md-2">
-                                <input id="filebutton" name="filebutton" class="input-file" type="file">
-                            </div>
+                        <div class="form-group col-md-3">
+                            <label for="Reputação">Reputação :</label>
+                            <select class="w-100 form-control mt-lg-1 mt-md-2">
+                                <option>4 Estrelas</option>
+                                <option value="1">1 Estrela</option>
+                                <option value="2">2 Estrelas</option>
+                                <option value="4">3 Estrelas</option>
+                                <option value="4">4 Estrelas</option>
+                                <option value="4">5 Estrelas</option>
+                            </select>
                         </div>
 
                         <div class="modal-footer">
@@ -248,13 +248,13 @@
         </div>
     </div>
 
-    <!-- Excluir -->
+    <!-- Excluir Cliente -->
     <div class="modal fade" id="excluir" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <form method="post">
                     <div class="modal-header">
-                        <h4 class="modal-title">Remover Funcionário</h4>
+                        <h4 class="modal-title">Remover Cliente</h4>
                         <button type="button" class="close" data-dismiss="modal">X</button>
                     </div>
                     <div class="modal-body">
